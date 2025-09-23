@@ -1,0 +1,285 @@
+/* ============================================= */
+/*          ESTILOS GENERALES Y VARIABLES        */
+/* ============================================= */
+:root {
+    --color-primario: #007bff;
+    --color-secundario: #6c757d;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-texto);
+}
+
+/* ============================================= */
+/*          ENCABEZADO / HEADER                  */
+/* ============================================= */
+.header {
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: var(--header-height);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    color: var(--color-primario);
+}
+
+.header img
+{
+    display: flex;
+    width: 15%;
+    height: auto;
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+/* ============================================= */
+/*            BANNER PRINCIPAL                   */
+/* ============================================= */
+.banner-principal {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(bicicletas/banner.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.producto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+}
+
+.producto-card p {
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+    min-height: 48px; /* Para alinear botones */
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.seccion-marcas {
+    background-color: var(--color-fondo);
+}
+
+.marcas-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.marca-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+
+.marca-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.marca-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+/* ============================================= */
+/*            PIE DE PÁGINA / FOOTER             */
+/* ============================================= */
+.footer {
+    background-color: #222;
+    color: #ccc;
+    padding-top: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-columna h3 {
+    color: var(--color-blanco);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-secundario);
+    padding-bottom: 10px;
+}
+
+.footer-columna ul {
+    list-style: none;
+}
+
+.footer-columna ul li {
+    margin-bottom: 10px;
+}
+
+.footer-columna ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-columna ul li a:hover {
+    color: var(--color-primario);
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+}
+
+.logo-scott {
+    height: 60px;
+}
