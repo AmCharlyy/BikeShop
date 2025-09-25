@@ -12,8 +12,8 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="Bike_shop.html" class="logo">
-                <img src="bicicletas/bike_logo.png" class="logo-img">
+            <a href="#logo" class="logo">
+                <img src="resources/bike_logo.png" class="logo-img">
             </a>
             <nav>
                 <ul>
@@ -22,10 +22,12 @@
                     <li><a href="#marcas">Marcas</a></li>
                     <li><a href="#">Acerca de</a></li>
                 </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle-btn">
+                    <img id="darkModeIcon" src="resources/dark-mode.svg" alt="Dark Mode Toggle">
+                </button>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="banner-principal">
             <div class="banner-content">
@@ -38,45 +40,42 @@
             <div class="container">
                 <h2>Nuestros Productos</h2>
                 <div class="catalogo-grid">
-                    <!-- Producto 1 -->
                     <div class="producto-card">
-                        <img src="bicicletas/Specialized S64203K.webp" alt="Bicicleta de Montaña">
+                        <img src="resources/Specialized S64203K.webp" alt="Bicicleta de Montaña">
                         <h3>S64203K</h3>
                         <p>Suspensión delantera y 21 velocidades. Ideal para senderos.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
                     <div class="producto-card">
-                        <img src="bicicletas/Specialized xtrail 21.webp" alt="Bicicleta de Montaña">
+                        <img src="resources/Specialized xtrail 21.webp" alt="Bicicleta de Montaña">
                         <h3>Xtrail 21</h3>
                         <p>Cuadro de aluminio ligero y cambios Shimano. Perfecta para carretera.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
                     <div class="producto-card">
-                        <img src="bicicletas/Canyon Exced CF.png" alt="Bicicleta Urbana">
+                        <img src="resources/Canyon Exced CF.png" alt="Bicicleta Urbana">
                         <h3>Exced CF</h3>
                         <p>Diseño minimalista y guardabarros integrado. La mejor para la ciudad.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
                     <div class="producto-card">
-                        <img src="bicicletas/Scott Contessa.png" alt="Bicicleta de Gravel">
+                        <img src="resources/Scott Contessa.png" alt="Bicicleta de Gravel">
                         <h3>Contessa</h3>
                         <p>Versátil para asfalto y terracería. Cubiertas anchas para mayor agarre.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
                     <div class="producto-card">
-                        <img src="bicicletas/Trek Centurfit.webp" alt="Bicicleta de Gravel">
+                        <img src="resources/Trek Centurfit.webp" alt="Bicicleta de Gravel">
                         <h3>Centurfit</h3>
                         <p>Versátil para asfalto y terracería. Cubiertas anchas para mayor agarre.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
                                         <div class="producto-card">
-                        <img src="bicicletas/Trek Shimano 21.webp" alt="Bicicleta de Gravel">
+                        <img src="resources/Trek Shimano 21.webp" alt="Bicicleta de Gravel">
                         <h3>Shimano 21</h3>
                         <p>Versátil para asfalto y terracería. Cubiertas anchas para mayor agarre.</p>
                         <a href="#" class="btn-secundario">Ver Detalles</a>
                     </div>
-                    
-                    <!-- Puedes añadir más productos aquí -->
                 </div>
             </div>
         </section>
@@ -85,14 +84,14 @@
                 <h2>Marcas Destacadas</h2>
                 <div class="marcas-logos">
                     <a href="#" class="marca-logo">
-                        <img src="bicicletas/canyon.png" alt="Logo canyon"></a>
+                        <img src="resources/canyon.png" alt="Logo canyon"></a>
                     <a href="#" class="marca-logo logo-scott">
-                        <img src="bicicletas/scott.png" alt="Logo Scott">                    </a>
+                        <img src="resources/scott.png" alt="Logo Scott">                    </a>
                     <a href="#" class="marca-logo">
-                        <img src="bicicletas/specialized.png" alt="Logo specialized">
+                        <img src="resources/specialized.png" alt="Logo specialized">
                     </a>
                     <a href="#" class="marca-logo">
-                        <img src="bicicletas/trek.png" alt="Logo Trek"></a>
+                        <img src="resources/trek.png" alt="Logo Trek"></a>
                 </div>
             </div>
         </section>
@@ -129,5 +128,19 @@
             <p>&copy; 2025 BIKE SHOP. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                darkModeIcon.src = 'resources/light-mode.svg';
+            } else {
+                darkModeIcon.src = 'resources/dark-mode.svg';
+            }
+        });
+    </script>
 </body>
 </html>
